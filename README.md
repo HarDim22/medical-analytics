@@ -23,7 +23,7 @@ Send header: `X-API-Key: <ANALYTICS_API_KEY>`
 - Events: `GET /events`
 
 ## Run locally (Windows / PowerShell)
-```powershell
+
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
@@ -32,3 +32,23 @@ $env:ANALYTICS_API_KEY="change-me-strong"
 python create_tables.py
 python seed_events.py
 python -m uvicorn app.main:app --reload
+
+Open:
+
+http://127.0.0.1:8000/dashboard
+
+http://127.0.0.1:8000/public/metrics/summary
+
+http://127.0.0.1:8000/docs
+
+
+---
+
+## 4) “How to ingest” 
+
+### Example: Ingest one event
+
+curl -X POST "http://127.0.0.1:8000/events" \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: change-me-strong" \
+  -d '{"event_type":"data_upload_started","entity_id":"SUB-999","timestamp":"2026-01-10T10:00:00Z","actor_role
