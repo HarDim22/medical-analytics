@@ -1,0 +1,16 @@
+# IDE / Editor
+.vs/
+.vscode/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Local DB / secrets
+medical_analytics.db
+.env
+
+# OS
+.DS_Store
+Thumbs.db

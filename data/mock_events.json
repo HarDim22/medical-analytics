@@ -1,0 +1,16 @@
+{
+    "event_type": "data_upload_started",
+    "entity_id": "SUB-001",
+    "timestamp": "2026-01-10T10:00:00Z",
+    "actor_role": "patient",
+    "metadata": { "source": "web" }
+}
+{"event_type":"missing_required_field","entity_id":"SUB-001","timestamp":"2026-01-10T10:00:10Z","actor_role":"system","metadata":{"field":"wbc"}}
+{"event_type":"data_upload_started","entity_id":"SUB-002","timestamp":"2026-01-10T10:05:00Z","actor_role":"patient","metadata":{"source":"web"}}
+{"event_type":"data_upload_completed","entity_id":"SUB-002","timestamp":"2026-01-10T10:06:00Z","actor_role":"patient","metadata":{"hb":14.2,"wbc":6.1,"glucose":110}}
+{"event_type":"analysis_completed","entity_id":"SUB-002","timestamp":"2026-01-10T10:08:00Z","actor_role":"system","metadata":{"engine":"rules-v1"}}
+{"event_type":"clinician_review_completed","entity_id":"SUB-002","timestamp":"2026-01-10T10:15:00Z","actor_role":"clinician","metadata":{"decision":"ok"}}
+{"event_type":"data_upload_started","entity_id":"SUB-003","timestamp":"2026-01-10T11:00:00Z","actor_role":"patient","metadata":{"source":"mobile"}}
+{"event_type":"data_upload_completed","entity_id":"SUB-003","timestamp":"2026-01-10T11:02:00Z","actor_role":"patient","metadata":{"hb":8.5,"wbc":5.5,"glucose":95}}
+{"event_type":"out_of_range_value_detected","entity_id":"SUB-003","timestamp":"2026-01-10T11:02:05Z","actor_role":"system","metadata":{"field":"hb","value":8.5,"min":9.0,"max":18.0}}
+{"event_type":"analysis_failed","entity_id":"SUB-003","timestamp":"2026-01-10T11:04:00Z","actor_role":"system","metadata":{"reason":"quality_gate_failed"}}
